@@ -1,0 +1,15 @@
+﻿
+<div style="height: 100%;">
+    <input style="transform-origin: top left;" type="range" min="0" max="100" @bind-value=Scale />
+    <div style="height: 100%; transform-origin: top left; transform: scale(@(Scale / 100.0f)); transition: 0.25s ease-in-out;">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int Scale { get; set; } = 100;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

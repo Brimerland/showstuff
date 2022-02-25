@@ -1,0 +1,133 @@
+﻿@inject IJSRuntime JSRuntime
+
+
+<div style="height: 100%; width: 100%; @gridLayout" @ref=SplitContainer 
+        @onmousemove=OnContainerMouseMoveAsync @onmouseup=OnUpSplitterAsync @onmousemove:preventDefault=SplitterChanging>
+
+    <div style="overflow: auto; @gridItem1">
+        @This
+    </div>
+
+    @if (!Fixed)
+    {
+        <div @ref=SplitDiv style="overflow: hidden; background-color: #333; border-width:1px; border-style:solid; border-color: #666; @gridSplit" 
+        @onmousedown=OnDownSplitterAsync @onmouseup=OnUpSplitterAsync
+        @ondblclick=OnDblClickSplitterAsync>
+        </div>
+    }
+
+    <div style="overflow: auto; @gridItem2">
+        @Other
+    </div>
+
+</div>
+
+
+@code {
+    [Parameter]
+    public bool Vertical { get; set; }
+
+    [Parameter]
+    public double SplitAt { get; set; } = 0.5f;
+
+    [Parameter]
+    public bool Absolute { get; set; }
+
+    [Parameter]
+    public bool Fixed { get; set; }
+
+    [Parameter]
+    public RenderFragment This   { get; set; }
+
+    [Parameter]
+    public RenderFragment Other { get; set; }
+
+    string gridLayout;
+    string gridItem1;
+    string gridItem2;
+    string gridSplit;
+
+    ElementReference SplitContainer;
+    ElementReference SplitDiv;
+
+    public class BoundingClientRect
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
+        public double Top { get; set; }
+        public double Right { get; set; }
+        public double Bottom { get; set; }
+        public double Left { get; set; }
+    }
+
+    public bool SplitterChanging { get; set; }
+    async Task OnUpSplitterAsync(MouseEventArgs e)
+    {
+        SplitterChanging = false;
+        StateHasChanged();
+    }
+
+    async Task OnDownSplitterAsync(MouseEventArgs e)
+    {
+        SplitterChanging = true;
+        StateHasChanged();
+    }
+
+    async Task OnContainerMouseMoveAsync(MouseEventArgs e)
+    {
+        if (SplitterChanging)
+        {
+            // currently the dimensions can only be received via javascript
+            var result = await JSRuntime.InvokeAsync<BoundingClientRect>("MyDOMGetBoundingClientRect", SplitContainer);
+
+
+            SplitAt = Vertical ? e.ClientY - result.Top : e.ClientX - result.Left;
+            if (!Absolute)
+                SplitAt /= Vertical ? result.Height : result.Width;
+
+            UpdateGridStyles();
+            StateHasChanged();
+        }
+    }
+
+    async Task OnDblClickSplitterAsync(MouseEventArgs e)
+    {
+        if (e.CtrlKey)
+            SwitchOrientation();
+    }
+
+    void SwitchOrientation()
+    {
+        Vertical = !Vertical;
+        UpdateGridStyles();
+        StateHasChanged();
+    }
+
+    void UpdateGridStyles()
+    {
+        (var wholePart, var splitPart) = ("row", "column");
+
+        if (Vertical)
+            (wholePart, splitPart) = (splitPart, wholePart);
+
+        var splitterAmount = Fixed ? "0em" : "0.5em";
+        var splitFirstValue = SplitAt;
+        var splitSecondValue = 1.0f - splitFirstValue;
+
+        var template = Absolute ? $"{splitFirstValue}px {splitterAmount}" : $"{splitFirstValue}fr {splitterAmount} {splitSecondValue}fr";
+
+        gridLayout = $"display: grid; grid-template-{wholePart}s: 1fr; grid-template-{splitPart}s: {template}";
+        gridItem1 = $"grid-{wholePart}: 1 / span 1; grid-{splitPart}: 1 / span 1;";
+        gridItem2 = $"grid-{wholePart}: 1 / span 1; grid-{splitPart}: 3 / span 1;";
+        gridSplit = $"grid-{wholePart}: 1 / span 1; grid-{splitPart}: 2 / span 1;";
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        UpdateGridStyles();
+
+        return Task.CompletedTask;
+    }
+}
