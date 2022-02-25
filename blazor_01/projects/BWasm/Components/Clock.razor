@@ -1,0 +1,25 @@
+@implements IDisposable
+
+@DateTime.Now
+
+@code
+{
+    TaskCompletionSource<bool> TCS_Disposed = new();
+
+    protected override void OnInitialized()
+    {
+        _ = Task.Run(async () => {
+            var disposedTask = TCS_Disposed.Task;
+            while (!disposedTask.IsCompleted)
+            {
+                if (disposedTask != await Task.WhenAny(disposedTask, Task.Delay(1000)))
+                    await InvokeAsync(() => StateHasChanged());
+            }
+        });
+    }
+
+    public void Dispose()
+    {
+        TCS_Disposed?.TrySetResult(true);
+    }
+}
