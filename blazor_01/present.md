@@ -23,4 +23,4 @@
 [Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-6.0)
 
 ## Deployed WASM Sample
-[Sample](projects/BWasm/bin/Debug/net6.0/publish/wwwroot/index.html)
+[Sample](projects/BWasm/bin/Debug/net6.0/publish/wwwroot/)
