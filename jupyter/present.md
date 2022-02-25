@@ -1,8 +1,6 @@
 # Jupyter Notebooks
 
-Achitecture:
-
-https://docs.jupyter.org/en/latest/projects/architecture/content-architecture.html
+[Architecture here](https://docs.jupyter.org/en/latest/projects/architecture/content-architecture.html)
 
 
 ## Needed VS Code Extensions
