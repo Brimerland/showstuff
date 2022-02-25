@@ -21,8 +21,6 @@ https://docs.jupyter.org/en/latest/projects/architecture/content-architecture.ht
 * Add Markdowm block
 * Save .ipynb file to inspect it
 
-
-
-
+[Sample Notebook here](the%20graph.ipynb)
 
 
