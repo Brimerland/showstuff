@@ -12,6 +12,7 @@
     <link href="css/site.css" rel="stylesheet" />
     <link href="BServer.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+    <script> MyDOMGetBoundingClientRect = (element, parm) => { return element.getBoundingClientRect(); }; </script>
 </head>
 <body>
     @RenderBody()
