@@ -1,5 +1,5 @@
-@import '_content/LauncherApp/LauncherApp.bundle.scp.css';
-@import '_content/Sandbox/Sandbox.bundle.scp.css';
+@import 'content/LauncherApp/LauncherApp.bundle.scp.css';
+@import 'content/Sandbox/Sandbox.bundle.scp.css';
 
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-49km74naiz] {
