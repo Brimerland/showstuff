@@ -1,0 +1,64 @@
+/* _content/Sandbox/ConfigBar.razor.rz.scp.css */
+.ConfigBar[b-5j5tfvigm0] {
+    display: flex;
+    flex-direction: column;
+}
+/* _content/Sandbox/ConfigBarItem.razor.rz.scp.css */
+.ConfigBarItem[b-mnxah76bfu] {
+    font-family: hurmegeometricsans;
+    font-size: 1.25rem;
+    margin: 1rem;
+    text-transform: uppercase;    
+}
+/* _content/Sandbox/DebugLogView.razor.rz.scp.css */
+.DebugLogView *[b-68uyfeajbb] {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    font-feature-settings: "liga" 0, "calt" 0;
+    letter-spacing: 0px;
+    line-height: 19px;
+    /*color: #ffa198;*/
+    /*background-color: #0d1117;*/
+}
+/* _content/Sandbox/MainLayout.razor.rz.scp.css */
+body *[b-k71jilmuev] {
+    background-color: #161c28; /* BackgroundColor */
+    color: #f0f0f1; /* TextColor */
+}
+/* _content/Sandbox/MainNavBar.razor.rz.scp.css */
+.MainNavBar[b-cii5ko030z] {
+    display: flex;    
+}
+/* _content/Sandbox/MainNavBarItem.razor.rz.scp.css */
+.MainNavBarItem[b-osxslz9oad] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 550;
+    margin: 1rem;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.MainNavBarItemInactive[b-osxslz9oad] {
+    color: #989BA0; /* TextColorInactive */
+}
+
+    .MainNavBarItemInactive:hover[b-osxslz9oad] {
+        color: #b8bBc0; /* TextColorInactiveHover */
+    }
+/* _content/Sandbox/SmallEdit.razor.rz.scp.css */
+.SmallEdit *[b-q4b91lvsn4] {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    font-feature-settings: "liga" 0, "calt" 0;
+    letter-spacing: 0px;
+    line-height: 19px;
+    /*color: #ffa198;*/
+    /*background-color: #0d1117;*/
+}
+/* _content/Sandbox/SubNavBar.razor.rz.scp.css */
+.SubNavBar[b-hhmpn4cmm9] {
+    display: flex;
+}
