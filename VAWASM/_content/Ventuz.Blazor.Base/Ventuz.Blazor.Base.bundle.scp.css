@@ -1,0 +1,92 @@
+/* _content/Ventuz.Blazor.Base/LocalModalDialog.razor.rz.scp.css */
+.localmodaldialog-mask-neutral[b-uxhlyyt840] {
+    height: 100%;
+    width: 100%;
+}
+
+.localmodaldialog-mask[b-uxhlyyt840] {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.localmodaldialog-masking-content[b-uxhlyyt840] {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 100;
+    position: relative;
+    height: 90%;
+    width: 90%;
+    
+    color: black;
+    background: lightgray;
+    border: 0.2rem solid #fff;
+    border-radius: 0.2rem;
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.localmodaldialog-masked-content[b-uxhlyyt840] {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: -1;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.localmodaldialog-background-mask[b-uxhlyyt840] {
+    grid-column: 1;
+    grid-row: 1;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+}
+
+.localmodaldialog-button-container[b-uxhlyyt840] {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
+
+
+.localmodaldialog-content-container[b-uxhlyyt840] {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.localmodaldialog-cancel-container[b-uxhlyyt840] {
+    grid-column: 1;
+    grid-row: 1;
+    place-self: end;
+}
+/* _content/Ventuz.Blazor.Base/ModalDialog.razor.rz.scp.css */
+:modal[b-4og24rtvr8] {
+    background: lightgray;
+    border: 0.2rem solid #fff;
+    border-radius: 0.2rem;
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+
+.modaldialog-button-container[b-4og24rtvr8] {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
+
+
+.modaldialog-content-container[b-4og24rtvr8] {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.modaldialog-cancel-container[b-4og24rtvr8] {
+    grid-column: 1;
+    grid-row: 1;
+    place-self: end;
+}

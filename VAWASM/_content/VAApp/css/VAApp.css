@@ -1,0 +1,251 @@
+﻿/* COMMON */
+
+@font-face {
+    font-family: hurmegeometricsans;
+    src: url("../fonts/hurmegeometricsans2-bold.woff") format('woff')
+}
+
+*:not(br) {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Roboto", "Tahoma", "Verdana", "Noto", "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--primary-foreground-color);
+}
+
+/* COMMON END */
+
+/* COMPONENT */
+
+.ventuz-component,
+.ventuz-component-part {
+}
+
+.ventuz-component {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    padding: var(--primary-padding);
+}
+
+.ventuz-component-part {
+    /*padding: var(--secondary-padding);*/
+    /*margin: var(--secondary-margin);*/
+    border: 1px solid #4f4f4f;
+}
+
+.ventuz-component-partlist {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: var(--secondary-margin);
+}
+
+.ventuz-component-partlist > * {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.partlist-horz {
+    flex-direction: row;
+}
+
+.partlist-vert {
+    flex-direction: column;
+}
+
+.part-main {
+    flex: 1; /* use remaining space */
+}
+
+/* COMPONENT END */
+
+/* ICONS */
+
+.oi.oi-anim-spin,
+.spin-hover:hover .oi {
+    animation: spin-cw 1.5s linear infinite;
+}
+
+.oi.oi-anim-spin.spin-ccw,
+.spin-hover.spin-ccw:hover .oi {
+    animation-name: spin-ccw;
+}
+
+@keyframes spin-cw {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-ccw {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+/* ICONS END */
+
+/* BUTTONS */
+
+button,
+button:visited,
+button:enabled {
+    margin: 0;
+    color: var(--primary-foreground-color);
+    background-color: var(--interactive-color);
+    font-size: 1rem;
+    transition: opacity 0.35s;
+    padding: var(--secondary-padding);
+    opacity: 1;
+}
+
+button:enabled:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+button:enabled:active {
+    filter: contrast(150%);
+}
+
+button:disabled {
+    filter: brightness(50%);
+}
+
+button.vtz-icon-only {
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    vertical-align: middle;
+}
+
+/* BUTTONS END */
+
+/* MISC */
+
+.center-vertically {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+/* MISC END */
+
+
+
+
+
+:modal {
+    /*background: lightgray;*/
+    border: 0.2rem solid #fff;
+    border-radius: 0.2rem;
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+@keyframes backdropbluranim {
+    from {
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        backdrop-filter: blur(4px);
+    }
+}
+
+::backdrop {
+    backdrop-filter: blur(4px);
+    animation-name: backdropbluranim;
+    animation-duration: 0.5s;
+}
+
+.vd-gen {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.vd-authentication-status-topright {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.vd-authentication-status {
+    border: solid;
+    padding: 1rem;
+    color: yellow;
+}
+
+.vd-authentication-status > .vd-authentication-status-value {
+    color: #dedede;
+}
+
+.vd-button-container {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
+
+.vd-dialog-content-container {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.vd-dialog-cancel-container {
+    grid-column: 1;
+    grid-row: 1;
+    place-self: end;
+}
+
+.vd-auth-login {
+    min-width: 15rem;
+}
+
+.vd-form-line {
+    width: 100%;
+}
+
+.vd-form-line-input {
+    padding-left: 0.2rem;
+    padding-right: 0;
+    height: 1.4rem;
+    border: 1px solid #aaa;
+    border-radius: 0.2rem;
+    width: 100%;
+}
+
+
+.bg-json * {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    font-feature-settings: "liga" 0, "calt" 0;
+    letter-spacing: 0px;
+    line-height: 19px;
+    color: #ffa198;
+    background-color: #0d1117;
+}
+
+
+.bg-json input[type=text] {
+    color: #a5d6ff;
+    background-color: #1d2127;
+    border: none;
+    border-bottom: 2px solid #3d4147;
+}
+
+.bg-json-array-index {
+    color: #616a38;
+}

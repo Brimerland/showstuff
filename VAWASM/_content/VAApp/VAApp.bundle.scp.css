@@ -1,0 +1,12 @@
+/* _content/VAApp/AppRoot.razor.rz.scp.css */
+.my-component[b-q10bk4y9yd] {
+    border: 2px dashed red;
+    padding: 1em;
+    margin: 1em 0;
+    background-image: url('background.png');
+}
+/* _content/VAApp/Startup.razor.rz.scp.css */
+body *[b-5yk1m52d9i] {
+    background-color: #161c28; /* BackgroundColor */
+    color: #f0f0f1; /* TextColor */
+}

@@ -1,0 +1,35 @@
+/* _content/Ventuz.Blazor.TTY/TerminalView.razor.rz.scp.css */
+.vtz-tty-base[b-qay65y554g] {
+    background-color: black;
+}
+
+.vtz-tty-content[b-qay65y554g] {
+    font-family:Consolas, Courier New, Courier, monospace;
+}
+
+    .vtz-tty-focus:not(:focus)[b-qay65y554g] {
+        opacity: 0.5;
+    }
+
+.vtz-tty-blink[b-qay65y554g] {
+    animation: blink-b-qay65y554g 1.06s step-start infinite;
+}
+
+.vtz-tty-cursor[b-qay65y554g] {
+}
+
+    .vtz-tty-cursor[b-qay65y554g]:after {
+        content: '';
+        width: 0.5rem;
+        height: 0;
+        border-top: 0.25rem solid;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: blink-b-qay65y554g 1.06s step-start infinite;
+    }
+
+@keyframes blink-b-qay65y554g {
+    50% {
+        opacity: 0;
+    }    
+}

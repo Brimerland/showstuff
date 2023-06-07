@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>VAWASM</title>
+    <base href="/" />
+    <!--
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    -->
+    <link href="_content/VAApp/css/app.css" rel="stylesheet" />
+    <link href="VAWASM.styles.css" rel="stylesheet" />
+
+    <!-- added by hand ... need some automation to add the needed components at compile time for WASM(bjoern) -->
+    <link href="_content/Radzen.Blazor/css/material-base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">Loading...</div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+
+
+    <!-- added by hand ... need some automation to add the needed components at compile time for WASM(bjoern) -->
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+
+    <script>
+        var localstorage = {
+            set: function (key, data) {
+                localStorage.setItem(key, data);
+            },
+            get: function (key) {
+                return localStorage.getItem(key);
+            },
+            remove: function (key) {
+                localStorage.removeItem(key);
+            }
+        };
+    </script>
+</body>
+
+</html>
