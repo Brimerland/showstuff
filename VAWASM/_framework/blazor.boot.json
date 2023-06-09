@@ -8,7 +8,7 @@
   "resources": {
     "assembly": {
       "Ansole.VA.dll": "sha256-+s9cwRH+fyZZ5LMb+MjEd6efiAXTW3XVAoCV4zcK6yM=",
-      "Brimerland.VA.dll": "sha256-npnDKAsun\/1VuSLI5uOC9ex3QMYb4\/96gXgMEcAEr98=",
+      "Brimerland.VA.dll": "sha256-XfZvucs8VDYY60+tTkMZru1g7KYYdtskyXJeYzMWm64=",
       "Microsoft.AspNetCore.Components.dll": "sha256-pYMga0U\/bCdHySXwnNEK11WJr7sjmDjGFXs3e1sF2ds=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-yLu2aNhPBSM5XlvV\/AmzbgW6uulrhDJ+1D+xzWVQNdY=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-Hv2+h1wIsomdRLCtEU2pjrY4LOEmBF9b6uM4nKywe3E=",
@@ -81,8 +81,8 @@
       "System.Xml.Linq.dll": "sha256-A4CODzYb1u9XpUZmVzurgU7y8PBOj9tm7Ru5VFqAE8g=",
       "System.Xml.ReaderWriter.dll": "sha256-EgcCS1RFY20HzgANsBJtLJ8EBz4+gHvj0\/+q7sbMxdE=",
       "System.Xml.XDocument.dll": "sha256-3pI9P6qIIlLGS33fj1MHYWw1Bv34aJnaRy5f8AbJpFc=",
-      "VAApp.dll": "sha256-me9e71J3Yh3+j2+co8NKq5VPWo7rTSV9sG5Gwt4ffPg=",
-      "VAWASM.dll": "sha256-W8vfyVApruP1oaCTS8DiWTX8KO4ZakKRJEYfsyI5XY8=",
+      "VAApp.dll": "sha256-Vk24x3Xmzz+BY5wvHkVv8c9q2uFTXCHMo8uoeXd9RLU=",
+      "VAWASM.dll": "sha256-j8s5lMUfAXsOSQuUFiZ4uQEK8wsg2Jz3Clz8FnTeIvo=",
       "Ventuz.Blazor.Base.dll": "sha256-BTK7\/upVpl3nX5zx+sb\/DPsgBtlCRkZVQKLDNK7MAaA=",
       "Ventuz.Blazor.Radzen.dll": "sha256-Q50Euyg5BqX+dI7yFic0bouXOzxSrNQer98p74jIT\/M=",
       "Ventuz.Blazor.TTY.dll": "sha256-nobZXpGqROeqlxME0i+v7ge4Fw9QKFPmBsSq2rGI5oc=",
