@@ -1,0 +1,12 @@
+/* needed to change some hover styles */
+
+.rz-panel-titlebar-toggler:hover {
+    color: var(--rz-base-500);
+}
+
+
+
+.rz-textbox:focus ~ .rz-form-field-label, .rz-textarea:focus ~ .rz-form-field-label, .rz-spinner:focus-within ~ .rz-form-field-label, .rz-autocomplete:focus-within ~ .rz-form-field-label, .rz-textbox:not(:placeholder-shown) ~ .rz-form-field-label, :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-filled .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-flat .rz-textarea:focus ~ .rz-form-field-label, .rz-variant-filled :not(.rz-state-empty) ~ .rz-form-field-label, .rz-variant-flat :not(.rz-state-empty) ~ .rz-form-field-label {
+    color: var(--rz-base-400);
+    background-color: var(--rz-base-800);
+}
