@@ -1,0 +1,22 @@
+/* /Components/LightScreen.razor.rz.scp.css */
+.lightScreen[b-ydp2ubou6o] {
+    width: 100%;
+    height: 100%;
+    background-color: #f00;
+}
+
+.lightScreen_anim_change[b-ydp2ubou6o] {
+    transition: background-color 1000ms linear;
+}
+/* /Components/Pages/Home.razor.rz.scp.css */
+.bl_mainContainer[b-j7da2cq2sy] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    height: 100vh;
+}
+
+.bl_fullscreen[b-j7da2cq2sy] {
+    grid-area: 1 / 1 / 4 / 4;
+}
