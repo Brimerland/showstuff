@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BrowserLight",
   "resources": {
-    "hash": "sha256-IL1GsgkUhLvJoPz7zrYj8dWSsWWVy9eegbdpoKFoeMI=",
+    "hash": "sha256-Pkd70Y2xH/6FgkQuj7hRiLr/7JcgEYnwQ62OxXcSfBQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.0-rc.2.23479.6.f340yf3hhj.js": "sha256-9prN/5lb3WIsk2ApeMfArAoTBSsUab3y9MBUmgxjV38="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "BrowserLight.wasm": "sha256-mu1S5PJd1I/15/5IAEEIrYlIPeNzsiJbwUfN7c99tA0=",
+      "BrowserLight.wasm": "sha256-BNuyWfVCC6IZxxlRNdIJGrNwuq7ICeWA6BmqxyGgfSQ=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-z5Znkpl/kBCEKZQ2Ev+NXOMJ5PrQAL6l5t6ZlEDNbUc=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-7HsmrkX+NUluYl6bnDVqfFML7CZuQ6qtRkGF/YvyfI0=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-TNNMyZGNYq0fRPpfKv0ak+v93hgSEtx1u24avcdqzAc=",
